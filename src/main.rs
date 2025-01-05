@@ -25,6 +25,13 @@ async fn main() {
         USDWebSocketClient::subscribe(usd_tx).await;
     });
 
+    // Adapter                             domain service
+    // Upbit websocket -----
+    //                      |-> message -> combine
+    // Binance websocket --- 
+
+    // { exchange, price }
+
     // Initialize services and message handler
     let combine_service: CombineService = CombineService;
     let websocket_server: WebSocketServer = WebSocketServer;
